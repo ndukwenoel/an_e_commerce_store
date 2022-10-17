@@ -75,7 +75,10 @@ class AppColumn extends StatelessWidget {
                 text: '32min',
                 iconColor: AppColors.iconColor1),
           ],
-        )
+        ),
+        SizedBox(
+          width: Dimensions.width10,
+        ),
       ],
     );
   }

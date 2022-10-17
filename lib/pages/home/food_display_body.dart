@@ -43,6 +43,7 @@ class _FoodDisplayBodyState extends State<FoodDisplayBody> {
   @override
   void dispose() {
     pageController.dispose();
+    super.dispose();
   }
 
   @override
@@ -52,15 +53,17 @@ class _FoodDisplayBodyState extends State<FoodDisplayBody> {
       GetBuilder<PopularProductController>(builder:(popularProducts){
         return popularProducts.isLoaded? Container(
           // color: Colors.red,
-          height: 320,
+          height: Dimensions.height320,
           child: PageView.builder(
               controller: pageController,
               itemCount: popularProducts.popularProductList.length,
               itemBuilder: (context, position) {
                 return _buildPageItem(position, popularProducts.popularProductList[position]);
               }),
-        ): CircularProgressIndicator(
-          color: AppColors.mainColor,
+        ): const Center(
+          child: CircularProgressIndicator(
+            color: AppColors.mainColor,
+          ),
         );}
       ),
       ///dots
@@ -119,7 +122,7 @@ class _FoodDisplayBodyState extends State<FoodDisplayBody> {
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: (){
-                  Get.toNamed(RouteHelper.getRecommendedFood(index));
+                  Get.toNamed(RouteHelper.getRecommendedFood(index, 'home'));
                 },
                 child: Container(
                   margin: EdgeInsets.only(
@@ -239,7 +242,7 @@ class _FoodDisplayBodyState extends State<FoodDisplayBody> {
       child: Stack(children: [
         GestureDetector(
           onTap: (){
-            Get.toNamed(RouteHelper.getPopularFood(index));
+            Get.toNamed(RouteHelper.getPopularFood(index,'home' ));
           },
           child: Container(
             height: Dimensions.pageViewContainer,

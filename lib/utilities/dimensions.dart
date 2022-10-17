@@ -17,12 +17,13 @@ class Dimensions{
 
    static double pageView = screenHeight/2.6;  // pageView height is 320 on iphone 12 pro
    static double pageViewContainer = screenHeight/3.84;  // pageViewContainer height is 220 on iphone 12pro
-   static double pageViewTextContainer = screenHeight/7.03;  // pageViewTextContainer height is 120 on iphone 12pro
+   static double pageViewTextContainer = screenHeight/6.8;  // pageViewTextContainer height is 120 on iphone 12pro
 
 /// dynamically calculating padding and margin distances
 
    static double height5 = screenHeight/168.8;  //height of 10
    static double height10 = screenHeight/84.4;  //height of 10
+   static double height12 = screenHeight/70.3;  //height of 15
    static double height15 = screenHeight/56.3;  //height of 15
    static double height20 = screenHeight/42.2;  //height of 20
    static double height25 = screenHeight/33.8;  //height of 25
@@ -33,12 +34,14 @@ class Dimensions{
    static double height80 = screenHeight/10.55;  //height of 80
    static double height120 = screenHeight/7.03;  //height of 120
    static double height300 = screenHeight/2.81;  //height of 300
+   static double height320 = screenHeight/2.64;  //height of 320
 
 
    ///
    static double width8 = screenHeight/105.5;  //width of 8
    static double width9 = screenHeight/93.77;  //width of 9
    static double width10 = screenHeight/84.4;  //width of 10
+   static double width12 = screenHeight/70.3;  //height of 15
    static double width15 = screenHeight/56.3;  //width of 15
    static double width20 = screenHeight/42.2;  //width of 20
    static double width25 = screenHeight/33.8;  //width of 25
